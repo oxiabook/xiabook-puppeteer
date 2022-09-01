@@ -1,0 +1,7 @@
+docker build -f Dockerfile -t yangzhu/puppeteer-alpine:v1.0.0 . 
+docker build -f Dockerfile -t xiabook/puppeteer-alpine:v1.0.1 . 
+停止就删除
+docker run -it -d --name xiabook-puppeteer -it -p 8088:8088 yangzhu/puppeteer-alpine:v1.0.0
+docker run -it -d yangzhu/puppeteer-alpine:v1.0.0 -p 8088:8088 --name xiabook-puppeteer
+
+docker run -it --rm yangzhu/puppeteer-alpine:v1.0.0 -p 8088:8088 /bin/sh
